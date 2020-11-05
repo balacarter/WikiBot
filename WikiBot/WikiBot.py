@@ -152,7 +152,7 @@ def get_wiki_sum(summary):
 
     for term in terms:
         if(len(term) > 0):
-            print(term)
+            
             s = ""
             for word in term:
                 s += word + " "
@@ -162,7 +162,7 @@ def get_wiki_sum(summary):
                 pg = wikipedia.page(s)
                 wiki_summary = pg.summary
                 print("Searching for: " + s + "Found page: " + pg.title)
-                #print(summary)
+                print(wiki_summary)
             except wikipedia.exceptions.DisambiguationError as e:
                 print("Disambiguation")
             except wikipedia.exceptions.PageError as x:
